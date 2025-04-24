@@ -1,0 +1,27 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+  }
+  
+  .hero-img {
+    max-height: 500px;
+  }
+  
+  .bio h2 {
+    font-weight: 700;
+  }
+  
+  .socials a {
+    font-size: 1.25rem;
+    color: #000;
+  }
+  
+  .socials a:hover {
+    color: #198754;
+  }
