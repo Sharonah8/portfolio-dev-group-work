@@ -37,7 +37,7 @@ The goal was to implement clean, semantic HTML structure and modular CSS (or Boo
 ## 👥 Group Members
 
 - Sharon Nyamongo
-- [Name 2]
+- Bumho Nisubire
 - [Name 3]
 - [Name 4]
 - [Name 5]
