@@ -1,50 +1,324 @@
+/* Base styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    padding-top: 70px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    height: 100vh;
-  }
-  
-  .hero-img {
-    max-height: 500px;
-  }
-  
-  .bio h2 {
-    font-weight: 700;
-  }
-  
-  .socials a {
-    font-size: 1.25rem;
-    color: #000;
-  }
-  
-  .socials a:hover {
-    color: #198754;
-  }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  body.dark-mode {
-    background-color: #121212;
-    color: #f0f0f0;
-  }
-  
-  body.dark-mode .navbar {
-    background-color: #222;
-  }
-  
-  body.dark-mode .btn-outline-secondary {
-    color: #fff;
-    border-color: #fff;
-  }
-  
-  body.dark-mode .btn-outline-secondary:hover {
-    background-color: #fff;
-    color: #000;
-  }
-  
+.hero {
+  background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+}
+
+.hero-img {
+  max-height: 500px;
+}
+
+.bio h2 {
+  font-weight: 700;
+}
+
+.socials a {
+  font-size: 1.25rem;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #198754;
+}
+
+.hero-img,
+.skills-img,
+.bio img,
+.portfolio-item img,
+.services-icons img {
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hero-img:hover,
+.skills-img:hover,
+.bio img:hover,
+.portfolio-item img:hover,
+.services-icons img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills .row {
+  align-items: center;
+}
+
+.skills-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.skills .container {
+  max-width: 1100px;
+}
+
+.skills .col-md-6 {
+  padding: 20px;
+}
+
+/* Statistics Section */
+.statistics {
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+.statistics .display-4 {
+  color: #198754;
+  margin-bottom: 0;
+}
+
+.statistics p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+/* Services Section */
+.services {
+  transition: background-color 0.3s ease;
+}
+
+.services .shadow-sm {
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Services with Icons Section */
+.services-icons {
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.service-card {
+  border-radius: 8px;
+  transition: all 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  height: 100%;
+}
+
+.service-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Portfolio Section */
+.portfolio {
+  transition: background-color 0.3s ease;
+}
+
+.portfolio-item {
+  height: 250px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  position: relative;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Partners Section */
+.partners {
+  background-color: #3A7E6A;
+  transition: background-color 0.3s ease;
+}
+
+.partner-logo {
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+  opacity: 1;
+}
+
+.partner-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 80px;
+}
+
+/* DARK MODE STYLES */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Navbar dark mode */
+body.dark-mode .navbar {
+  background-color: #222 !important;
+}
+
+/* Buttons dark mode */
+body.dark-mode .btn-outline-secondary {
+  color: #fff;
+  border-color: #fff;
+}
+
+body.dark-mode .btn-outline-secondary:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+body.dark-mode .btn-outline-success {
+  color: #20c997;
+  border-color: #20c997;
+}
+
+/* Hero section dark mode */
+body.dark-mode .hero {
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: overlay;
+}
+
+/* Bio section dark mode */
+body.dark-mode .bio {
+  background-color: #121212;
+}
+
+body.dark-mode .bio .text-muted {
+  color: #adb5bd !important;
+}
+
+body.dark-mode .socials a {
+  color: #f0f0f0;
+}
+
+body.dark-mode .socials a:hover {
+  color: #20c997;
+}
+
+/* Services section dark mode */
+body.dark-mode .services {
+  background-color: #1a1a1a !important;
+}
+
+body.dark-mode .services .shadow-sm {
+  background-color: #222 !important;
+  color: #f0f0f0;
+  box-shadow: 0 0.125rem 0.25rem rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Skills section dark mode */
+body.dark-mode .skills {
+  background-color: #121212;
+}
+
+body.dark-mode .skills .text-muted {
+  color: #adb5bd !important;
+}
+
+body.dark-mode .skills .progress {
+  background-color: #2d2d2d;
+}
+
+/* Statistics section dark mode */
+body.dark-mode .statistics {
+  background-color: #1a1a1a !important;
+}
+
+body.dark-mode .statistics .display-4 {
+  color: #20c997;
+}
+
+body.dark-mode .statistics p {
+  color: #adb5bd;
+}
+
+/* Services icons section dark mode */
+body.dark-mode .services-icons {
+  background-color: #121212;
+}
+
+body.dark-mode .service-card {
+  background-color: #222;
+  color: #f0f0f0;
+}
+
+body.dark-mode .service-card:hover {
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+}
+
+/* Portfolio section dark mode */
+body.dark-mode .portfolio {
+  background-color: #1a1a1a !important;
+}
+
+body.dark-mode .portfolio h2 {
+  color: #f0f0f0;
+}
+
+body.dark-mode .portfolio-item {
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+}
+
+/* Partners section dark mode */
+body.dark-mode .partners {
+  background-color: #198754;
+}
+
+/* Hover effects in dark mode */
+body.dark-mode .hero-img:hover,
+body.dark-mode .skills-img:hover,
+body.dark-mode .bio img:hover,
+body.dark-mode .portfolio-item img:hover,
+body.dark-mode .services-icons img:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Text color adjustments for dark mode */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #f0f0f0;
+}
+
+body.dark-mode .text-dark {
+  color: #f0f0f0 !important;
+}
+
+/* Links in dark mode */
+body.dark-mode a:not(.btn) {
+  color: #20c997;
+}
+
+body.dark-mode a:not(.btn):hover {
+  color: #0dcaf0;
+}
+
+/* Smooth transitions to all elements */
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
